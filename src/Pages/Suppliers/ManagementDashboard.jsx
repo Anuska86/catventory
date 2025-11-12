@@ -25,6 +25,7 @@ const ManagementDashboard = () => {
         >
           Clients
         </NavLink>
+        {/*
         <NavLink
           to="warehouses"
           className={({ isActive }) =>
@@ -41,6 +42,7 @@ const ManagementDashboard = () => {
         >
           Carriers
         </NavLink>
+        */}
       </div>
       <div className="tab-content">
         <Outlet />

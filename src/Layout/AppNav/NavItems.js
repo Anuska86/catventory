@@ -36,6 +36,7 @@ export const OperationsNav = [
     icon: "pe-7s-cart",
     label: "Purchases",
     content: [
+      /*
       {
         icon: "pe-7s-plus",
         label: "Estimation",
@@ -48,6 +49,7 @@ export const OperationsNav = [
         to: "/purchase/in-house-request",
         note: "This is for in-house stock requests",
       },
+      */
       {
         icon: "pe-7s-note",
         label: "Create",
@@ -59,11 +61,13 @@ export const OperationsNav = [
         label: "Overview",
         to: "/purchase/overview",
       },
+      /*
       {
         icon: "pe-7s-gleam",
         label: "Forecast",
         to: "/purchase/forecast",
       },
+      */
       {
         icon: "pe-7s-wallet",
         label: "Invoices",
@@ -81,22 +85,24 @@ export const OperationsNav = [
         to: "/orders/add-order",
         note: "This is for orders from clients to the commercial team",
       },
+      /*
       {
         icon: "pe-7s-note2",
         label: "RFQ",
         to: "/orders/rfq-table",
       },
+      */
       {
         icon: "pe-7s-display2",
         label: "BackOrder",
         to: "/orders/backorder",
       },
+      /*
       {
         icon: "pe-7s-gleam",
         label: "Simulations",
         to: "/orders/simulation",
       },
-      /*
       {
         icon: "pe-7s-wallet",
         label: "Order invoices",
@@ -127,11 +133,13 @@ export const OperationsNav = [
     icon: "pe-7s-car",
     label: "Deliveries",
     content: [
+      /*
       {
         icon: "pe-7s-gleam",
         label: "Simulation",
         to: "/deliveries/simulation",
       },
+      */
       {
         icon: "pe-7s-plus",
         label: "Schedule Delivery",
@@ -152,11 +160,13 @@ export const OperationsNav = [
 ];
 
 export const UtilsNav = [
+  /*
   {
     icon: "pe-7s-car",
     label: "Fleet Cost",
     to: "/utils/fleet-cost",
   },
+  */
   {
     icon: "pe-7s-cash",
     label: "Currencies",
@@ -170,6 +180,7 @@ export const UtilsNav = [
 ];
 
 export const StockNav = [
+  /*
   {
     icon: "pe-7s-network",
     label: "Warehouse",
@@ -181,6 +192,7 @@ export const StockNav = [
       },
     ],
   },
+  */
   {
     icon: "pe-7s-folder",
     label: "Catalog",
@@ -213,20 +225,23 @@ export const StockNav = [
         label: "Add Product",
         to: "/stock/add-product",
       },
+      /*
       {
         icon: "pe-7s-note2",
         label: "List of Products",
         to: "/stock/list-of-products",
         note: "This is for immediate orders from comercial to supplier",
       },
+      */
     ],
   },
-  ,
+  /*
   {
     icon: "pe-7s-server",
     label: "Stock Management",
     content: [],
   },
+  */
 ];
 
 export const ComponentsNav = [

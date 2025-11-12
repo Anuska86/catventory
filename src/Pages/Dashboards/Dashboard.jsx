@@ -31,7 +31,7 @@ const Dashboard = () => {
         >
           User Tracking
         </button>
-        */}
+        
         <button
           className={`nav-button ${
             activeTab === "warehouse-status" ? "active" : ""
@@ -48,6 +48,7 @@ const Dashboard = () => {
         >
           Rejected Orders
         </button>
+        */}
       </nav>
 
       {activeTab === "orders" && <Orders />}
