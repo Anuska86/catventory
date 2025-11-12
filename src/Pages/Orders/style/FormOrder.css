@@ -1,0 +1,355 @@
+/*FORM*/
+/*
+.card,
+.card-body {
+  all: unset;
+}
+
+*/
+
+.upload-form {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(120deg, #f8f9fa 0%, #e3e6ee 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(120, 115, 245, 0.08);
+  border: 1px solid #ececf6;
+}
+
+.form-title,
+.create-order-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3em;
+  background: linear-gradient(90deg, #d8459d, #7873f5);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.form-center {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.form-select,
+input[type="select"],
+select {
+  display: block;
+  width: 300px;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1.5px solid #d1d5db;
+  font-size: 1rem;
+  background-color: #f7f7fa;
+  color: #444;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.form-select:focus,
+select:focus,
+input[type="select"]:focus {
+  border-color: #7873f5;
+  outline: none;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group button {
+  margin-top: 0.5rem;
+}
+
+.file-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.file-row input[type="file"] {
+  flex: 1;
+  min-width: 180px;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background-color: #f7f7fa;
+  color: #444;
+}
+
+.form-hint {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/*FILE*/
+.file-name {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.file-hint {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.status {
+  font-size: 0.95rem;
+  padding: 8px;
+  border-radius: 6px;
+  text-align: center;
+  width: 100%;
+  margin-top: 6px;
+}
+
+/*CALENDAR*/
+
+.calendar-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.calendar-popup {
+  position: absolute;
+  z-index: 1000;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 5px;
+  min-height: 300px;
+  overflow: visible;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+/*PRODUCT SEARCH*/
+
+.list-group-item.selected {
+  background: linear-gradient(90deg, #dbeafe 0%, #c7d2fe 100%);
+  font-weight: bold;
+  color: #4b2991;
+}
+
+.product-search-input {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1.5px solid #d1d5db;
+  font-size: 1rem;
+  background-color: #f7f7fa;
+  color: #444;
+  transition: border-color 0.2s;
+}
+
+.product-search-input:focus {
+  border-color: #7873f5;
+  outline: none;
+}
+
+.product-search-results .list-group-item {
+  border: none;
+  background-color: white;
+  font-size: 0.95rem;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  color: #444;
+  border-radius: 6px;
+}
+
+.product-search-results .list-group-item:hover {
+  background: linear-gradient(90deg, #f1f5f9 0%, #e0e7ff 100%);
+  color: #4b2991;
+}
+
+.product-search-results {
+  margin-top: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  background: linear-gradient(90deg, #f8fafc 0%, #e0e7ff 100%);
+  font-weight: 500;
+  display: block !important;
+  box-shadow: 0 2px 8px rgba(120, 115, 245, 0.06);
+}
+.product-search-results.show {
+  display: block;
+}
+
+.product-search-results .list-group-item {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/*CLIENT*/
+.selected-client {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/*STATUS*/
+
+.status.success {
+  background-color: #e6ffed;
+  border: 1px solid #b2f5ea;
+  color: #2e7d32;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.status.error {
+  background-color: #fdecea;
+  border: 1px solid #f5c6cb;
+  color: #c62828;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.status.uploading {
+  background-color: #e3f2fd;
+  border: 1px solid #90caf9;
+  color: #007bff;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+/*BUTTON*/
+
+.submit-button,
+.basket-button,
+.clear-basket-button {
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(90deg, #7873f5 0%, #ff6ec4 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(120, 115, 245, 0.07);
+  margin-right: 0.5rem;
+}
+
+.submit-button:disabled,
+.basket-button:disabled,
+.clear-basket-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.submit-button:hover:not(:disabled),
+.basket-button:hover:not(:disabled),
+.clear-basket-button:hover:not(:disabled) {
+  background: linear-gradient(90deg, #5a54c7 0%, #d8459d 100%);
+  box-shadow: 0 2px 8px rgba(120, 115, 245, 0.12);
+}
+
+.basket-button {
+  background: linear-gradient(90deg, #4b2991 0%, #7873f5 100%);
+}
+
+.clear-basket-button {
+  background: linear-gradient(90deg, #c62828 0%, #f44336 100%);
+}
+
+.basket-preview h5 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  color: #4b2991;
+  font-weight: 700;
+}
+
+.basket-preview {
+  background: linear-gradient(90deg, #f1f5f9 0%, #e0e7ff 100%);
+  padding: 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 2px 8px rgba(120, 115, 245, 0.04);
+}
+
+.basket-preview .btn-danger {
+  margin-left: 10px;
+}
+
+.basket-quantity-input {
+  margin-right: 10px;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  background-color: #f7f7fa;
+  color: #444;
+  width: 80px;
+}
+
+.basket-item-controls {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/*SELECTED*/
+
+.selected-sku {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/*INPUT*/
+
+input[type="text"],
+input[type="number"] {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1.5px solid #d1d5db;
+  font-size: 1rem;
+  background-color: #f7f7fa;
+  color: #444;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #7873f5;
+  outline: none;
+}
+
+/*BASKET*/
+
+.basket-button {
+  margin-top: 20px;
+}
+
+/*NO RESULTS*/
+
+.no-results {
+  color: #c62828;
+  background: #fdecea;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  text-align: center;
+}

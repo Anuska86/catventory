@@ -1,0 +1,198 @@
+/*Popover*/
+
+.custom-popover {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  width: 300px;
+  max-width: 320px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/*Notification*/
+
+.notification-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-left: 4px solid transparent;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.notification-details {
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.notification-details .description {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.notification-details .meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.notification-item:hover {
+  background-color: #eef;
+}
+
+.notification-item:not(:last-child) {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.notification-details .btn {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+.notification-details .btn-solve {
+  background-color: #28a745;
+  color: white;
+  border: none;
+}
+
+.notification-details .btn-close {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+}
+
+/*Label*/
+
+.importance-critical {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+.importance-moderate {
+  color: #f0ad4e;
+  font-weight: bold;
+}
+
+.importance-low {
+  color: #5cb85c;
+  font-weight: bold;
+}
+
+.notification-meta-label {
+  font-weight: 600;
+  color: #444;
+  display: inline-block;
+  width: 100px;
+}
+
+/*Alert*/
+
+.alert {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+/*Button*/
+
+.btn i {
+  font-size: 0.85rem;
+  margin-right: 0.25rem;
+  vertical-align: middle;
+}
+
+.view-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.view-button:hover {
+  background-color: #0056b3;
+}
+
+.view-more-button {
+  background-color: #6f42c1;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  width: 100%;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.view-more-button:hover {
+  background-color: #5a32a3;
+}
+
+.view-button,
+.view-more-button {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.view-button:hover,
+.view-more-button:hover {
+  transform: translateY(-1px);
+}
+
+/*Modal*/
+
+.modal-content {
+  border-radius: 8px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.modal-header {
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+}
+
+.modal-body {
+  background-color: #f8f9fa;
+  padding: 1rem 1.5rem;
+}
+
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+.modal.show .modal-dialog {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modal-body p:not(:last-child) {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/*Media*/
+
+@media (max-width: 480px) {
+  .custom-popover {
+    width: 100%;
+    max-width: none;
+    padding: 0.75rem;
+  }
+
+  .view-button,
+  .view-more-button {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+  }
+}

@@ -1,0 +1,158 @@
+/* Container for the whole KPI module */
+.orders-dashboard-section {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+}
+
+/*TITLE*/
+
+.KPIs-dashboard-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.main-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2em;
+  background: linear-gradient(90deg, #d8459d, #7873f5);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  justify-self: center;
+  align-items: center;
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 0.8rem;
+  font-size: 1.8rem;
+  color: #83588a;
+}
+
+/* Main KPI card */
+.PKI-principal-container > div:first-child {
+  width: 100%;
+}
+
+/* Key Actions Section */
+.KPI-actions {
+  width: 100%;
+  background-color: #fff8f0;
+  border: 1px solid #ffd8b0;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(255, 165, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+  color: #ff8c00;
+}
+
+.kpi-sections-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.KPI-actions ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.KPI-actions li {
+  margin-bottom: 0.5rem;
+}
+
+.key-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.key-action-card {
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: help;
+}
+
+.key-action-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.key-action-card h4 {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.key-action-card p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* List Users Section */
+.list-users {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.list-users ol {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.list-users li {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  transition: transform 0.2s ease;
+  background: #fff;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.list-users li:hover {
+  transform: scale(1.02);
+  color: #0077cc;
+}
+
+/*AVATAR*/
+
+.avatar-circle {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  line-height: 32px;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+/*MEDIA*/
+@media (min-width: 900px) {
+  .kpi-sections-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}

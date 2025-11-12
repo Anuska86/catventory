@@ -1,0 +1,167 @@
+.description-text {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  white-space: normal;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+  overflow-wrap: break-word;
+}
+
+.menu-header-image {
+  height: 1px;
+  border-radius: 12px 12px 0 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.avatar-icon-wrapper {
+  margin-right: 0.75rem;
+}
+
+.avatar-icon img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  background: #fafafa;
+}
+
+.menu-header-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.menu-header-subtitle {
+  font-size: 1rem;
+  color: #ffe082;
+  margin-bottom: 0;
+}
+
+.menu-header-btn-pane {
+  margin-left: auto;
+}
+
+/*CARDS*/
+
+.card-shadow-primary {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  width: 370px;
+  flex: 0 0 370px;
+  background: #fff;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  height: 430px;
+}
+
+.card-shadow-primary:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card-details {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem 1.25rem;
+  border-top: 1px solid #eee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-top: 1rem;
+  border: none;
+}
+
+.card-details p strong {
+  color: #007bff;
+}
+
+.card-border {
+  border-left: 4px solid #ffc107;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+}
+
+.card-body-flex {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/*WIDGET*/
+
+.widget-content {
+  flex-grow: 0;
+  min-height: 150px;
+  max-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*Dropdown*/
+
+.dropdown-menu-header {
+  height: 222px;
+  overflow: hidden;
+}
+
+.dropdown-menu-header-inner {
+  background: linear-gradient(135deg, #6f42c1, #a457ec);
+  color: white;
+}
+
+/*ListGroup*/
+
+.ListGroupItem {
+  border: none;
+  background: transparent;
+}
+
+/*WIDGET*/
+
+.widget-content {
+  flex-grow: 1;
+}
+
+.widget-content p strong {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+/*GRID*/
+
+.grid-menu {
+  margin-top: auto;
+  padding: 0.5rem 0;
+}
+
+/*BUTTON*/
+
+.btn-icon-vertical {
+  min-width: 110px;
+  border-radius: 8px;
+  font-size: 0.98rem;
+  padding: 0.5rem 0.75rem;
+}

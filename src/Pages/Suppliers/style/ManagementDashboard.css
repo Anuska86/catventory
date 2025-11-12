@@ -1,0 +1,95 @@
+/* DASHBOARD CONTAINER */
+.dashboard-container {
+  margin: 40px auto;
+  padding: 32px 24px;
+  background: linear-gradient(120deg, #f8f9fa 0%, #ececf6 100%);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(120, 115, 245, 0.07);
+  border: 1px solid #ececf6;
+}
+
+/* TITLE */
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.7em;
+  font-weight: 700;
+  background: linear-gradient(90deg, #d8459d, #7873f5);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.02em;
+}
+
+.dashboard-container h2 {
+  text-align: center;
+  color: #555;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.01em;
+}
+
+/* TAB SWITCHER */
+.tab-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.tab-switcher .tab-link {
+  padding: 0.7rem 1.6rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border: 2px solid #e7dae4;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f8f9fa 0%, #f1f3f6 100%);
+  color: #444;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s;
+  box-shadow: 0 1px 2px rgba(120, 115, 245, 0.03);
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  outline: none;
+}
+
+.tab-switcher .tab-link:hover,
+.tab-switcher .tab-link:focus {
+  background: linear-gradient(90deg, #ececf6 0%, #f8f9fa 100%);
+  color: #222;
+  border-color: #7873f5;
+  box-shadow: 0 2px 6px rgba(120, 115, 245, 0.07);
+}
+
+.tab-switcher .active-tab {
+  background: linear-gradient(90deg, #f7f8fa 0%, #e9ebf2 100%);
+  color: #222;
+  border: 2px solid #7873f5;
+  box-shadow: 0 2px 8px rgba(120, 115, 245, 0.09);
+  transform: scale(1.03);
+}
+
+/* TAB CONTENT */
+.tab-content {
+  margin-top: 2rem;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(120, 115, 245, 0.04);
+  border: 1px solid #ececf6;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .dashboard-container {
+    padding: 16px 6px;
+  }
+  .tab-content {
+    padding: 1rem 0.5rem;
+  }
+  .dashboard-title {
+    font-size: 2em;
+  }
+}

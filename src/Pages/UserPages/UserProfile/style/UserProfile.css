@@ -1,0 +1,89 @@
+/* Avatar and toggle */
+.user-profile-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-profile-toggle img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-profile-toggle .icon {
+  margin-left: 8px;
+  opacity: 0.8;
+}
+
+/* Dropdown menu */
+.user-profile-dropdown {
+  width: 280px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.user-profile-header {
+  background-color: #17a2b8;
+  color: white;
+  padding: 16px;
+  position: relative;
+}
+
+.user-profile-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+}
+
+.user-profile-header .widget-heading {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.user-profile-header .widget-subheading {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* Activity section */
+.user-profile-nav {
+  padding: 12px 16px;
+}
+
+.user-profile-nav .nav-item-header {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.user-profile-nav a {
+  display: block;
+  padding: 6px 0;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.user-profile-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.user-profile-actions {
+  padding: 12px 16px;
+  text-align: center;
+}
+
+.user-profile-actions .btn-wide {
+  width: 100%;
+  font-weight: 500;
+}
+
+/* Logout */
+.user-profile-logout {
+  margin-top: 12px;
+  text-align: center;
+}

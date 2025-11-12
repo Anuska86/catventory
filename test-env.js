@@ -1,0 +1,1 @@
+console.log("ENV:", process.env.REACT_APP_CURRENCY_API_KEY);

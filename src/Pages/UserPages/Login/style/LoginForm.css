@@ -1,0 +1,159 @@
+.login-form-container {
+  animation: fadeIn 0.6s ease-in-out;
+  max-width: 480px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.login-form-container label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.login-form-container input[type="email"],
+.login-form-container input[type="password"] {
+  font-size: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-form-container input[type="email"]:focus,
+.login-form-container input[type="password"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+/*Checkbox*/
+
+form input,
+form textarea {
+  width: 20px;
+}
+
+.checkbox-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #333;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.checkbox-block input[type="checkbox"] {
+  margin-bottom: 11px;
+  vertical-align: middle;
+  transform: translateY(1px);
+}
+
+/*ERROR */
+.error-alert {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #f5c6cb;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/*BUTTON*/
+
+.login-form-container button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  background-color: #beacd6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.login-form-container button:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+.login-form-container button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.login-form-container button[type="submit"] {
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.login-form-container button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .login-form-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .login-form-container button {
+    font-size: 0.95rem;
+    padding: 0.65rem;
+  }
+
+  @media (max-width: 400px) {
+    .checkbox-block {
+      white-space: normal;
+    }
+  }
+}

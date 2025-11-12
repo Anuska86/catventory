@@ -1,0 +1,78 @@
+/*HEADER*/
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  height: 70px;
+}
+
+.guest-header-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100px;
+}
+
+.guest-header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.guest-header-message {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.guest-header-tagline {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.25rem;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.header_pane {
+  display: none;
+}
+
+.brand-name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  background: linear-gradient(90deg, #d8459d, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/*LOGO*/
+
+.logo-left {
+  margin: 0;
+}
+
+.logo-centered {
+  margin: 0 auto;
+}
+
+/*KEY FRAMES*/
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.guest-header-message {
+  animation: fadeIn 1s ease-out forwards;
+}

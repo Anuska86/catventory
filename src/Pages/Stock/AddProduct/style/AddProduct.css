@@ -1,0 +1,281 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* PAGE WRAPPER */
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;
+}
+
+/* FORM CONTAINER */
+.upload-form {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* FORM TITLE */
+.form-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3em;
+  background: linear-gradient(90deg, #d8459d, #7873f5);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.form-section-title {
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+/* FORM CENTERING */
+.form-center {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* FORM COLUMNS WRAPPER */
+.form-columns {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* INNER COLUMN WRAPPER */
+.form-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* SINGLE COLUMN SECTION */
+.form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* GRID SECTION */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* FORM CELL */
+.form-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+/* LABELS */
+label {
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* INPUTS & SELECTS */
+input[type="text"],
+input[type="number"],
+input[type="url"],
+textarea,
+select {
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  font-family: inherit;
+  width: 100%;
+  background-color: white;
+  appearance: none;
+  line-height: 1.5;
+}
+
+input,
+select {
+  height: 45px;
+}
+
+/* TEXTAREA */
+textarea#description {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/*DIVIDER*/
+
+hr.form-divider {
+  all: unset;
+  display: block;
+  width: 100%;
+  border-top: 1px dotted #999;
+  margin: 2rem 0;
+}
+
+@keyframes fadeInDivider {
+  to {
+    opacity: 1;
+  }
+}
+
+/* FULL-WIDTH SECTIONS */
+.full-width {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/* BUTTON WRAPPER */
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+/* SUBMIT BUTTON */
+.submit-button-add-product {
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  width: 400px;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* STATUS MESSAGES */
+.status {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.status.success {
+  background-color: #e6ffed;
+  border: 1px solid #b2f5ea;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: green;
+}
+
+.status.error {
+  color: red;
+}
+
+.status.uploading {
+  color: #007bff;
+}
+
+/* FILE UPLOAD ROW */
+.file-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.file-row input[type="file"] {
+  flex: 1;
+  min-width: 180px;
+}
+
+.file-name {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.file-hint {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* PRODUCT SEARCH */
+.product-search-input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.product-search-results {
+  margin-top: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: block !important;
+}
+
+.product-search-results.show {
+  display: block;
+}
+
+.product-search-results .list-group-item {
+  border: none;
+  background-color: white;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.product-search-results .list-group-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* CLIENT INFO */
+.selected-client,
+.selected-sku {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.selected-sku {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+}
+
+/* RESPONSIVE GRID */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-inner {
+    max-width: 100%;
+  }
+}

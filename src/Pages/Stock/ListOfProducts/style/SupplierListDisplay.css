@@ -1,0 +1,211 @@
+/* Supplier List Container */
+.supplier-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: flex-start;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fefefe;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+}
+
+.supplier-card {
+  flex: 1 1 300px;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgb(0, 0, 0, 0.1);
+}
+
+/* Individual Warehouse Card */
+.warehouse-card {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f4f4f4;
+  width: 350px;
+}
+
+.warehouse-card h4 {
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.warehouse-card p {
+  margin: 0.3rem 0;
+}
+
+/* Add Supplier Section */
+.add-new-supplier-form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+  align-items: flex-start;
+  gap: 2rem;
+  justify-content: flex-start;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #fefefe;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-supplier-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+/* Dropdown Form */
+.dropdown-form {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.dropdown-form input,
+.dropdown-form select {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Country Dropdown */
+.dropdown-form select:not([multiple]) {
+  background-color: #fff;
+}
+
+.country-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Transport Checkboxes */
+.transport-checkboxes {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.transport-method-section {
+  margin-top: 1rem;
+}
+
+.transport-checkboxes + .transport-checkboxes {
+  margin-top: 0.5rem;
+}
+
+/*Checkbox*/
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #fff;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+  accent-color: #545cd8;
+}
+
+.checkbox-label:hover {
+  background-color: #f0f0f0;
+}
+
+/*Country*/
+
+.selected-country-display {
+  font-style: italic;
+  color: #888;
+  margin-top: 8px;
+}
+
+/* Helper Text */
+.helper-text {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.helper-text.no-suppliers {
+  color: #2e7d32;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+/* Buttons */
+.supplier-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.supplier-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.supplier-button.edit {
+  background-color: #b265be;
+}
+
+.supplier-button.remove {
+  background-color: #d65763;
+}
+
+.supplier-button.add {
+  background: linear-gradient(90deg, #d8459d, #7873f5);
+}
+
+.supplier-button.save {
+  background-color: #17a2b8;
+}
+
+.supplier-button.save:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+  margin-left: 35px;
+  margin-right: 35px;
+}

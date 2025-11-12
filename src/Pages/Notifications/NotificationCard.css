@@ -1,0 +1,110 @@
+.unsolved-notifications-container {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 1rem;
+  position: absolute;
+  z-index: 999;
+}
+
+.notification-card {
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.notification-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.notification-card h5 {
+  margin-bottom: 0.5rem;
+}
+
+.card-body {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/*BUTTON*/
+.button-details {
+  margin-top: 1rem;
+  align-self: center;
+}
+
+.button-details:hover {
+  opacity: 0.9;
+}
+
+/*IMPORTANCE*/
+
+.importance-badge {
+  font-size: 0.75rem;
+  padding: 0.5em 0.75em;
+  border-radius: 1em;
+  background-color: #6c757d;
+  color: white;
+}
+
+.importance-badge.critical {
+  background-color: #dc3545 !important;
+}
+
+.importance-badge.high {
+  background-color: #fd7e14 !important;
+}
+
+.importance-badge.moderate {
+  background-color: #ffc107 !important;
+  color: rgb(255, 255, 255);
+}
+
+.importance-badge.low {
+  background-color: #8cc984 !important;
+}
+
+/*POPOVER*/
+
+.custom-popover {
+  max-width: 400px;
+  margin: 0 auto;
+  z-index: 1050;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.popover-body {
+  padding: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/*MEDIA*/
+
+@media (max-width: 768px) {
+  .notification-card {
+    width: 100%;
+    height: auto;
+    padding: 1rem 1.25rem;
+  }
+
+  .card-body {
+    padding: 1rem 1.25rem;
+  }
+  .notification-card h5 {
+    font-size: 1rem;
+  }
+
+  .button-details {
+    width: 100%;
+  }
+}

@@ -1,0 +1,20 @@
+.order-summary-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.client-details p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+/*BUTTONS*/
+
+.export-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
