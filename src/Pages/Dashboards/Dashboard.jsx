@@ -24,7 +24,6 @@ const Dashboard = () => {
         >
           Billing
         </button>
-        {/*
         <button
           className={`nav-button ${activeTab === "user-kpi" ? "active" : ""}`}
           onClick={() => setActiveTab("user-kpi")}
@@ -32,6 +31,7 @@ const Dashboard = () => {
           User Tracking
         </button>
         
+        {/*
         <button
           className={`nav-button ${
             activeTab === "warehouse-status" ? "active" : ""

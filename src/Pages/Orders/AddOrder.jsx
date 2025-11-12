@@ -167,7 +167,7 @@ export default class AddOrder extends React.Component {
       <Fragment>
         <div className="centered-container">
           <div>
-            <h1 className="new-order-page-title">Add New Order or RFQ</h1>
+            <h1 className="new-order-page-title">Add New Order</h1>
 
             <div className="tab-switcher">
               <button
@@ -182,12 +182,14 @@ export default class AddOrder extends React.Component {
               >
                 Add Order
               </button>
+              {/*
               <button
                 className={activeTab === "pricing" ? "active-tab" : ""}
                 onClick={() => this.handleTabSwitch("pricing")}
               >
                 Add Quote
               </button>
+              */}
             </div>
 
             <div

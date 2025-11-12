@@ -5,7 +5,7 @@ import Hamburger from "hamburger-react";
 
 import AppMobileMenu from "../AppMobileMenu";
 
-import logo from "../../assets/utils/images/quantum-mads-logo.png";
+import logo from "../../assets/utils/images/catInABox.png";
 
 import {
   setEnableClosedSidebar,
