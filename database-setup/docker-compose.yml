@@ -1,0 +1,65 @@
+version: '3.8'
+services:
+  primary:
+    image: postgres:latest
+    container_name: postgres_primary
+    hostname: primary
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=mydb
+    volumes:
+      - ./primary_setup.sh:/docker-entrypoint-initdb.d/primary_setup.sh
+      - primary-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h localhost -U admin"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ha_network
+      
+  replica1:
+    image: postgres:latest
+    container_name: postgres_replica1
+    hostname: replica1
+    depends_on:
+      primary:
+        condition: service_healthy
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=mydb
+    volumes:
+      - ./replica_setup.sh:/docker-entrypoint-initdb.d/replica_setup.sh
+      - replica1-data:/var/lib/postgresql/data
+    networks:
+      - ha_network
+
+  replica2:
+    image: postgres:latest
+    container_name: postgres_replica2
+    hostname: replica2
+    depends_on:
+      primary:
+        condition: service_healthy
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=mydb
+    volumes:
+      - ./replica_setup.sh:/docker-entrypoint-initdb.d/replica_setup.sh
+      - replica2-data:/var/lib/postgresql/data
+    networks:
+      - ha_network
+
+volumes:
+  primary-data:
+  replica1-data:
+  replica2-data:
+
+networks:
+  ha_network:
+    driver: bridge
