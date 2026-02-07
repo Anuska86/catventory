@@ -6,7 +6,7 @@ import { getStorage } from "firebase/storage";
 // La configuración de tu proyecto de Firebase.
 // Es crucial usar variables de entorno para las credenciales.
 const firebaseConfig = {
-  apiKey: "AIzaSyD5LF2YkQyHY6Jxooo38Ux_kwFQxsx9fxI",
+  apiKey: "AIza",
   authDomain: "catventory-1234.firebaseapp.com",
   projectId: "catventory-1234",
   storageBucket: "catventory-1234.firebasestorage.app",
