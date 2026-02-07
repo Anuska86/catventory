@@ -7,12 +7,12 @@ import { getStorage } from "firebase/storage";
 // Es crucial usar variables de entorno para las credenciales.
 const firebaseConfig = {
   apiKey: "AIzaSyD5LF2YkQyHY6Jxooo38Ux_kwFQxsx9fxI",
-  authDomain: "tradeflow-98696.firebaseapp.com",
-  projectId: "tradeflow-98696",
-  storageBucket: "tradeflow-98696.firebasestorage.app",
+  authDomain: "catventory-1234.firebaseapp.com",
+  projectId: "catventory-1234",
+  storageBucket: "catventory-1234.firebasestorage.app",
   messagingSenderId: "100606286232",
   appId: "1:100606286232:web:2971e6224504fcd0b633ed",
-  //meassurementId: "tradeflow-98696"
+  //meassurementId: "catventory-1234"
   measurementId: "G-XXXXXXXXXX",
 };
 
