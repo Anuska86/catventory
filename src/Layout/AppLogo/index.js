@@ -5,7 +5,7 @@ import Hamburger from "hamburger-react";
 
 import AppMobileMenu from "../AppMobileMenu";
 
-import logo from "../../assets/utils/images/catInABox.png";
+import logo from "../../assets/utils/images/cat-logo.png";
 
 import {
   setEnableClosedSidebar,
@@ -48,7 +48,7 @@ class HeaderLogo extends React.Component {
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
-              height: "60px",
+              height: "90px",
               width: "200px",
             }}
           />
