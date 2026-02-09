@@ -33,10 +33,19 @@ const UserProfile = ({ userId }) => {
         const userSnap = await getDoc(userRef);
 
         if (userSnap.exists()) {
+          const data = userSnap.data();
           setUser({
-            ...userSnap.data(),
             uid: userSnap.id,
             userId: userSnap.id,
+            name: data.displayName || data.name || "Unknown User",
+            position: data.role || data.position || "Staff",
+            avatarUrl:
+              data.photoURL ||
+              data.avatarUrl ||
+              "https://via.placeholder.com/40",
+            // Ensure settings exists even if missing in Firestore
+            settings: data.settings || { notifications: { email: false } },
+            ...data,
           });
         } else {
           console.warn("No user found for ID:", userId);
@@ -101,7 +110,7 @@ const UserProfile = ({ userId }) => {
 
         <Nav vertical className="user-profile-nav">
           <NavItem className="nav-item-header">Activity</NavItem>
-          {user.settings.notifications.email && (
+          {user?.settings?.notifications?.email && (
             <NavItem>
               <NavLink href="#">Email Alerts</NavLink>
             </NavItem>

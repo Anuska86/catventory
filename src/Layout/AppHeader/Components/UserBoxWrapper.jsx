@@ -12,32 +12,33 @@ const UserBoxWrapper = ({ userId }) => {
   const isLoggedIn =
     !loading && currentUser && !location.pathname.startsWith("/login");
 
+  // Inside UserBoxWrapper.jsx
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        if (userId) {
-          const db = getFirestore();
-          const userRef = doc(db, "users", userId);
+        const db = getFirestore();
+        // If we have a specific ID (like user_001), use it;
+        // otherwise use the logged-in user's UID
+        const targetId = userId || (isLoggedIn ? currentUser.uid : null);
+
+        if (targetId) {
+          const userRef = doc(db, "users", targetId);
           const userSnap = await getDoc(userRef);
 
           if (userSnap.exists()) {
-            const data = userSnap.data();
-            const enrichedUser = { ...data, userId: userSnap.id };
-            setDisplayUser(enrichedUser);
+            setDisplayUser({ ...userSnap.data(), userId: userSnap.id });
           } else {
-            console.warn("Test user not found:", userId);
+            // Fallback to Auth Info if Firestore doc is missing
+            console.warn(
+              `User document ${targetId} not found in Firestore. Using Auth fallback.`,
+            );
+            setDisplayUser({
+              userId: currentUser?.uid || "guest",
+              email: currentUser?.email || "No email",
+              displayName: currentUser?.displayName || "Guest User",
+              role: "viewer",
+            });
           }
-        } else if (isLoggedIn) {
-          const normalizedAuthUser = {
-            userId: currentUser.uid,
-            email: currentUser.email,
-            displayName: currentUser.displayName || "Anonymous",
-            createdAt: currentUser.metadata.creationTime,
-            lastSignIn: currentUser.metadata.lastSignInTime,
-          };
-          setDisplayUser(normalizedAuthUser);
-        } else {
-          console.warn("No userId and not logged in");
         }
       } catch (error) {
         console.error("Error fetching user:", error);

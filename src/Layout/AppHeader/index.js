@@ -62,7 +62,7 @@ const Header = ({
             <HeaderLogo />
             <div>
               <div className="guest-header-message">
-                Welcome to <span className="brand-name">TradeFlow</span>
+                Welcome to <span className="brand-name">Catventory</span>
               </div>
               <div className="guest-header-tagline">
                 Your gateway to smarter trading.
