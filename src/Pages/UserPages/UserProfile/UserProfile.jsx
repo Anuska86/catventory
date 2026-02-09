@@ -39,10 +39,10 @@ const UserProfile = ({ userId }) => {
             userId: userSnap.id,
             name: data.displayName || data.name || "Unknown User",
             position: data.role || data.position || "Staff",
+
             avatarUrl:
               data.photoURL ||
-              data.avatarUrl ||
-              "https://via.placeholder.com/40",
+              "https://www.freepik.com/free-vector/redhaired-woman-with-braid_356306545.htm",
             // Ensure settings exists even if missing in Firestore
             settings: data.settings || { notifications: { email: false } },
             ...data,
