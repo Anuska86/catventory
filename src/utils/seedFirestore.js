@@ -5,7 +5,7 @@ const { readFile } = require("fs/promises");
 const path = require("path");
 
 // Path to your service account key (moved to the GitHub root folder)
-const jsonPath = path.resolve(__dirname, "../../../serviceAccountKey.json");
+const jsonPath = path.resolve(__dirname, "../../serviceAccountKey.json");
 
 // --- UTILITIES ---
 
@@ -526,3 +526,6 @@ async function main() {
 }
 
 main().catch(console.error);
+
+
+//RUN: node src/utils/seedFirestore.js
