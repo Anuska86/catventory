@@ -1,27 +1,25 @@
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-// La configuración de tu proyecto de Firebase.
-// Es crucial usar variables de entorno para las credenciales.
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
-  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
+  projectId: "catventory",
+  storageBucket: "catventory.firebasestorage.app",
+  messagingSenderId: "236549268136",
+  appId: "1:236549268136:web:060fee88d79d5c8e1e589d",
+  measurementId: "G-4D76BL1XQJ",
 };
 
-// Inicializa la app de Firebase con la configuración.
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Inicializa los servicios que vayas a usar y los exporta.
-const auth = getAuth(app);
-const db = getFirestore(app);
-const storage = getStorage(app);
-
-// Exporta las instancias de los servicios.
-export { app, auth, db, storage };
+// Export the services so you can use them in your Dashboard components
+export const db = getFirestore(app);
+export const auth = getAuth(app);
