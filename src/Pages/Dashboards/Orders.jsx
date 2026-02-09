@@ -37,7 +37,7 @@ const Orders = () => {
   const [stock, setStock] = useState([]);
   const [productsData, setProductsData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [timeRange, setTimeRange] = useState("month");
+  const [timeRange, setTimeRange] = useState("year");
 
   // Constantes de Tiempo para Visualización (se usan en el JSX)
   const now = new Date();
@@ -60,20 +60,23 @@ const Orders = () => {
             getDocs(collection(db, "products")),
           ]);
 
-        const ordersData = ordersSnap.docs.map((doc) => doc.data());
-        setOrders(ordersData);
+        // CRITICAL: Ensure we are getting the data and the ID
+        const ordersData = ordersSnap.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
 
+        console.log("Orders fetched:", ordersData.length); // Check your console!
+        setOrders(ordersData);
         setClients(clientsSnap.docs.map((doc) => doc.data()));
         setStock(stockSnap.docs.map((doc) => doc.data()));
         setProductsData(productsSnap.docs.map((doc) => doc.data()));
 
         const totalSales = ordersData.reduce(
-          (sum, order) => sum + (order.totalBlockedAmount || 0),
-          0
+          (sum, order) => sum + (Number(order.totalBlockedAmount) || 0),
+          0,
         );
         setSales(totalSales);
-
-        setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
@@ -84,41 +87,42 @@ const Orders = () => {
     fetchData();
   }, []);
 
-  //TABS - Lógica de Filtrado CORREGIDA
   const filterOrdersByTimeRange = (orders, range) => {
     const now = new Date();
     const currentYear = now.getFullYear();
-    const currentMonth = now.getMonth(); // 0-11
-    const currentQuarter = Math.floor(currentMonth / 3); // 0-3
+    const currentMonth = now.getMonth();
+    const currentQuarter = Math.floor(currentMonth / 3);
 
     return orders.filter((order) => {
-      // Intenta obtener la fecha de un timestamp de Firebase o de un string/number
-      const date =
-        order.creationDate?.toDate?.() || new Date(order.creationDate);
-      
-      // Si la fecha es inválida, descarta la orden
-      if (!date || isNaN(date.getTime())) return false;
+      let date;
+
+      // Firestore Timestamp handling
+      if (order.creationDate?.seconds) {
+        date = new Date(order.creationDate.seconds * 1000);
+      } else if (order.creationDate instanceof Date) {
+        date = order.creationDate;
+      } else if (typeof order.creationDate === "string") {
+        date = new Date(order.creationDate);
+      } else {
+        return false;
+      }
 
       const orderYear = date.getFullYear();
       const orderMonth = date.getMonth();
       const orderQuarter = Math.floor(orderMonth / 3);
 
       if (range === "month") {
-        // Filtrar por el MES ACTUAL y el AÑO ACTUAL
         return orderMonth === currentMonth && orderYear === currentYear;
       }
       if (range === "quarter") {
-        // Filtrar por el TRIMESTRE ACTUAL y el AÑO ACTUAL
         return orderQuarter === currentQuarter && orderYear === currentYear;
       }
       if (range === "year") {
-        // Filtrar por el AÑO ACTUAL
         return orderYear === currentYear;
       }
-      return true; // En caso de un rango no especificado, incluir
+      return true;
     });
   };
-
   const productChartData = useMemo(() => {
     const filteredOrders = filterOrdersByTimeRange(orders, timeRange);
     const productMap = {};
@@ -174,7 +178,7 @@ const Orders = () => {
 
   const topCategory = categoryChartData.reduce(
     (max, entry) => (entry.value > max.value ? entry : max),
-    { category: "N/A", value: 0 }
+    { category: "N/A", value: 0 },
   );
 
   //Monthly sales
@@ -198,7 +202,7 @@ const Orders = () => {
 
       // Usamos el formato numérico para ordenar correctamente antes de formatear
       const monthKey = `${date.getFullYear()}-${String(
-        date.getMonth() + 1
+        date.getMonth() + 1,
       ).padStart(2, "0")}`; // Ej: 2023-10
       const monthLabel = date.toLocaleString("default", {
         month: "short",
@@ -207,7 +211,8 @@ const Orders = () => {
 
       monthlyMap[monthKey] = {
         month: monthLabel,
-        sales: (monthlyMap[monthKey]?.sales || 0) + (order.totalBlockedAmount || 0),
+        sales:
+          (monthlyMap[monthKey]?.sales || 0) + (order.totalBlockedAmount || 0),
         date: date,
       };
     });
@@ -224,7 +229,7 @@ const Orders = () => {
     }
     return monthlySalesData.reduce(
       (max, entry) => (entry.sales > max.sales ? entry : max),
-      { month: "", sales: 0 }
+      { month: "", sales: 0 },
     );
   }, [monthlySalesData]);
 
@@ -261,7 +266,7 @@ const Orders = () => {
             <h5>Total Clients: {clients?.length ?? 0}</h5>
           </div>
         </div>
-        <div className="orders-kpi-card" style={{display:"none"}}>
+        <div className="orders-kpi-card" style={{ display: "none" }}>
           <FaEuroSign size={20} />
           <div>
             {/* El total de ventas global no cambia con el filtro de tiempo, por eso usamos `sales` del estado */}
@@ -369,7 +374,9 @@ const Orders = () => {
 
           <div className="categories-container">
             {categoryChartData.length === 0 ? (
-              <div className="empty-state">No category data available for the current period.</div>
+              <div className="empty-state">
+                No category data available for the current period.
+              </div>
             ) : (
               <PieChart width={510} height={250}>
                 {" "}
@@ -416,7 +423,9 @@ const Orders = () => {
         <h3>📈 Monthly Sales Trend (Current Year)</h3>
         <div className="sales-container">
           {monthlySalesData.length === 0 ? (
-            <div className="empty-state">No monthly sales data available for {currentYear}.</div>
+            <div className="empty-state">
+              No monthly sales data available for {currentYear}.
+            </div>
           ) : (
             <ResponsiveContainer width="100%" height={220}>
               <AreaChart data={monthlySalesData}>
@@ -430,7 +439,9 @@ const Orders = () => {
                 <YAxis
                   tickFormatter={(value) => `€${(value / 1000).toFixed(0)}k`} // Formateo simple para evitar números grandes
                 />
-                <Tooltip formatter={(value) => [`€${value.toFixed(2)}`, "Sales"]} />
+                <Tooltip
+                  formatter={(value) => [`€${value.toFixed(2)}`, "Sales"]}
+                />
                 <Area
                   type="monotone"
                   dataKey="sales"
