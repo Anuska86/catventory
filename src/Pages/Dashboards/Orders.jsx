@@ -378,36 +378,32 @@ const Orders = () => {
                 No category data available for the current period.
               </div>
             ) : (
-              <PieChart width={510} height={250}>
-                {" "}
-                <Pie
-                  data={categoryChartData}
-                  dataKey="value"
-                  nameKey="category"
-                  cx="50%"
-                  cy="50%"
-                  innerRadius={50}
-                  outerRadius={80}
-                  label={({ category, percent }) =>
-                    `${category} (${(percent * 100).toFixed(0)}%)`
-                  }
-                  labelLine={false}
-                >
-                  {(categoryChartData ?? []).map((entry, index) => (
-                    <Cell
-                      key={`cell-${index}`}
-                      fill={COLORS[index % COLORS.length]}
-                    />
-                  ))}
-                </Pie>
-                <Tooltip />
-                <Legend
-                  layout="horizontal"
-                  align="center"
-                  verticalAlign="bottom"
-                  wrapperStyle={{ paddingTop: "10px" }}
-                />
-              </PieChart>
+              <ResponsiveContainer width="100%" height={300}>
+                <PieChart>
+                  <Pie
+                    data={categoryChartData}
+                    dataKey="value"
+                    nameKey="category"
+                    cx="50%"
+                    cy="50%"
+                    innerRadius={60} // Slightly larger for a cleaner look
+                    outerRadius={80}
+                    paddingAngle={5}
+                    label={({ category, percent }) =>
+                      `${category} (${(percent * 100).toFixed(0)}%)`
+                    }
+                  >
+                    {categoryChartData.map((entry, index) => (
+                      <Cell
+                        key={`cell-${index}`}
+                        fill={COLORS[index % COLORS.length]}
+                      />
+                    ))}
+                  </Pie>
+                  <Tooltip />
+                  <Legend verticalAlign="bottom" height={36} />
+                </PieChart>
+              </ResponsiveContainer>
             )}
           </div>
           {/* Duplicar el subtítulo del tiempo no es necesario aquí, ya que el filtro se aplica en el gráfico de productos */}
