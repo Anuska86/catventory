@@ -142,8 +142,8 @@ export default class IncomeReport2 extends Component {
               <AreaChart data={data55} margin={{ top: 0, right: 20, left: 20, bottom: 0 }}>
                 <defs>
                   <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#545cd8" stopOpacity={0.8}/>
-                    <stop offset="95%" stopColor="#545cd8" stopOpacity={0}/>
+                    <stop offset="5%" stopColor="#2c6089" stopOpacity={0.8}/>
+                    <stop offset="95%" stopColor="#2c6089" stopOpacity={0}/>
                   </linearGradient>
                   <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="5%" stopColor="#f7b924" stopOpacity={0.8}/>
@@ -153,7 +153,7 @@ export default class IncomeReport2 extends Component {
                 <XAxis dataKey="name" />
                 <CartesianGrid strokeDasharray="3 3" />
                 <Tooltip />
-                <Area type="monotone" dataKey="uv" stroke="#545cd8" fillOpacity={1} fill="url(#colorUv)"/>
+                <Area type="monotone" dataKey="uv" stroke="#2c6089" fillOpacity={1} fill="url(#colorUv)"/>
                 <Area type="monotone" dataKey="pv" stroke="#f7b924" fillOpacity={1} fill="url(#colorPv)"/>
               </AreaChart>
             </ResponsiveContainer>

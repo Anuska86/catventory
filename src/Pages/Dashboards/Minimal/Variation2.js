@@ -410,8 +410,8 @@ export default class MinimalDashboard2 extends Component {
                           <div className="widget-chart-wrapper widget-chart-wrapper-lg opacity-10 m-0">
                             <ResponsiveContainer width="100%"  height={177} aspect={3.0 / 1.0}>
                               <BarChart data={data222}>
-                                <Bar barGap="12" dataKey="Sales" stackId="a" fill="#545cd8"/>
-                                <Bar barGap="12"  dataKey="Downloads" fillOpacity=".2" stackId="a" fill="#545cd8"/>
+                                <Bar barGap="12" dataKey="Sales" stackId="a" fill="#2c6089"/>
+                                <Bar barGap="12"  dataKey="Downloads" fillOpacity=".2" stackId="a" fill="#2c6089"/>
                               </BarChart>
                             </ResponsiveContainer>
                           </div>

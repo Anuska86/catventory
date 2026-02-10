@@ -366,7 +366,7 @@ export default class CRMDashboard2 extends Component {
                                 <SparklinesCurve
                                   style={{
                                     strokeWidth: 3,
-                                    stroke: "#545cd8",
+                                    stroke: "#2c6089",
                                     fill: "none",
                                   }} />
                               </Sparklines>
@@ -764,8 +764,8 @@ export default class CRMDashboard2 extends Component {
                                     bottom: 0,
                                   }}>
                                   <Tooltip />
-                                  <Area type="monotoneX" dataKey="uv" stroke="#545cd8"
-                                    strokeOpacity=".8" strokeWidth={3} fill="#545cd8" fillOpacity=".08" />
+                                  <Area type="monotoneX" dataKey="uv" stroke="#2c6089"
+                                    strokeOpacity=".8" strokeWidth={3} fill="#2c6089" fillOpacity=".08" />
                                 </AreaChart>
                               </ResponsiveContainer>
                             </div>

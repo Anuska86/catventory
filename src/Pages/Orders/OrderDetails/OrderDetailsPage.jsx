@@ -137,7 +137,7 @@ const OrderDetailsPage = () => {
   return (
     <div className="order-details-page">
       <h2>Order #{scp}</h2>
-      <p style={{ "borderBottom": "1.5px solid #545cd8"}}><b>Client:</b> {clientName}, <b>PONumber:</b> {poNumber}</p>
+      <p style={{ "borderBottom": "1.5px solid #2c6089"}}><b>Client:</b> {clientName}, <b>PONumber:</b> {poNumber}</p>
       <ProductTable
         products={localProducts}
         warehouses={warehouses}

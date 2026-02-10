@@ -474,8 +474,8 @@ export default class CommerceDashboard2 extends Component {
                           <div className="widget-chart-wrapper widget-chart-wrapper-lg opacity-10 m-0">
                             <ResponsiveContainer height="100%">
                               <BarChart data={data222}>
-                                <Bar barGap="12" dataKey="Sales" stackId="a" fill="#545cd8"/>
-                                <Bar barGap="12" dataKey="Downloads" fillOpacity=".2" stackId="a" fill="#545cd8"/>
+                                <Bar barGap="12" dataKey="Sales" stackId="a" fill="#2c6089"/>
+                                <Bar barGap="12" dataKey="Downloads" fillOpacity=".2" stackId="a" fill="#2c6089"/>
                               </BarChart>
                             </ResponsiveContainer>
                           </div>
@@ -621,7 +621,7 @@ export default class CommerceDashboard2 extends Component {
                       <SparklinesLine
                         style={{
                           strokeWidth: 3,
-                          stroke: "#545cd8",
+                          stroke: "#2c6089",
                           fill: "none",
                         }}/>
                     </Sparklines>

@@ -1254,7 +1254,7 @@ export default class CRMDashboard1 extends Component {
                           <SparklinesLine
                             style={{
                               strokeWidth: 3,
-                              stroke: "#545cd8",
+                              stroke: "#2c6089",
                               fill: "none",
                             }} />
                         </Sparklines>

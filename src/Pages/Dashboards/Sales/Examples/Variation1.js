@@ -539,11 +539,11 @@ export default class SalesDashboard1 extends Component {
                               }}>
                               <defs>
                                 <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                                  <stop offset="10%" stopColor="#545cd8" stopOpacity={0.7}/>
-                                  <stop offset="90%" stopColor="#545cd8" stopOpacity={0}/>
+                                  <stop offset="10%" stopColor="#2c6089" stopOpacity={0.7}/>
+                                  <stop offset="90%" stopColor="#2c6089" stopOpacity={0}/>
                                 </linearGradient>
                               </defs>
-                              <Area type="monotoneX" dataKey="uv" stroke="#545cd8"
+                              <Area type="monotoneX" dataKey="uv" stroke="#2c6089"
                                 strokeWidth="3" fillOpacity={1} fill="url(#colorPv)"/>
                             </AreaChart>
                           </ResponsiveContainer>
@@ -568,7 +568,7 @@ export default class SalesDashboard1 extends Component {
                                           theme={{
                                             active: {
                                               trailColor: "rgba(0,0,0,0.1)",
-                                              color: "#545cd8",
+                                              color: "#2c6089",
                                             },
                                           }}/>
                                       </div>
@@ -607,7 +607,7 @@ export default class SalesDashboard1 extends Component {
                                           theme={{
                                             active: {
                                               trailColor: "rgba(0,0,0,0.1)",
-                                              color: "#545cd8",
+                                              color: "#2c6089",
                                             },
                                           }}/>
                                       </div>
@@ -721,7 +721,7 @@ export default class SalesDashboard1 extends Component {
                                           theme={{
                                             active: {
                                               trailColor: "rgba(0,0,0,0.1)",
-                                              color: "#545cd8",
+                                              color: "#2c6089",
                                             },
                                           }}/>
                                       </div>
@@ -797,7 +797,7 @@ export default class SalesDashboard1 extends Component {
                                           theme={{
                                             active: {
                                               trailColor: "rgba(0,0,0,0.1)",
-                                              color: "#545cd8",
+                                              color: "#2c6089",
                                             },
                                           }}/>
                                       </div>

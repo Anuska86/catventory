@@ -484,8 +484,8 @@ export default class AnalyticsDashboard1 extends Component {
                                     left: 0,
                                     bottom: 0,
                                   }}>
-                                  <Area type="monotoneX" dataKey="uv" stroke="#545cd8"
-                                    strokeWidth="4" fill="#545cd8" fillOpacity=".2"/>
+                                  <Area type="monotoneX" dataKey="uv" stroke="#2c6089"
+                                    strokeWidth="4" fill="#2c6089" fillOpacity=".2"/>
                                 </AreaChart>
                               </ResponsiveContainer>
                             </div>
@@ -807,7 +807,7 @@ export default class AnalyticsDashboard1 extends Component {
                         <SparklinesCurve
                           style={{
                             strokeWidth: 3,
-                            stroke: "#545cd8",
+                            stroke: "#2c6089",
                             fill: "none",
                           }}/>
                       </Sparklines>
