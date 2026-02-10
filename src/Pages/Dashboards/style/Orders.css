@@ -1,10 +1,10 @@
 /*DASHBOARD*/
 
 .orders-dashboard-section {
-  background: linear-gradient(135deg, #f0f0ff, #ffffff);
+  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
   padding: 2rem 3rem;
   border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(138, 43, 226, 0.1);
+  border: 1px solid rgba(44, 96, 137, 0.05);
 }
 
 .orders-dashboard-header {
@@ -41,36 +41,42 @@
   font-weight: 600;
   color: #333;
   min-width: 220px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   backdrop-filter: blur(12px);
   cursor: pointer;
   text-align: center;
 }
 
 .orders-kpi-card:nth-child(1) {
-  background-color: #b0b0d4;
+  background-color: #d1e3f0;
+  color: #2c6089;
 }
 
 .orders-kpi-card:nth-child(2) {
-  background-color: #ffe4e1;
+  background-color: #d1f0e4;
+  color: #1e7d6b;
 }
 
 .orders-kpi-card:nth-child(3) {
-  background-color: #e0ffff;
+  background-color: #e2d1f0;
+  color: #6a4c93;
 }
 
 .orders-kpi-card:nth-child(4) {
-  background-color: #f5f5dc;
+  background-color: #f0e8d1;
+  color: #89722c;
 }
 
 .orders-kpi-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(138, 43, 226, 0.2);
+  box-shadow: 0 12px 30px rgba(44, 96, 137, 0.2);
 }
 
 .orders-kpi-card svg {
   margin-bottom: 0.5rem;
-  color: #8a2be2;
+  color: #2c6089;
 }
 
 /*H*/
@@ -80,7 +86,7 @@
   margin-bottom: 1rem;
   font-family: "Montserrat", sans-serif;
   font-size: 2em;
-  background: linear-gradient(90deg, #d8459d, #7873f5);
+  background: linear-gradient(135deg, #2c6089 0%, #84b7dd 100%);
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
@@ -107,7 +113,7 @@ h3 {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  color: #83588a;
+  color: #2c6089;
   font-size: 1.2rem;
   margin-top: 0.5rem;
   margin-bottom: 0.25rem;
@@ -119,7 +125,7 @@ h3 {
   background: rgba(255, 255, 255, 0.7);
   border-radius: 16px;
   padding: 1rem;
-  box-shadow: 0 6px 20px rgba(190, 172, 214, 0.2);
+  box-shadow: 0 6px 20px rgba(44, 96, 137, 0.2);
   backdrop-filter: blur(8px);
   overflow: visible;
   width: 100%;
@@ -130,7 +136,7 @@ h3 {
 
 .chart-container:hover {
   transform: scale(1.02);
-  box-shadow: 0 12px 30px rgba(138, 43, 226, 0.25);
+  box-shadow: 0 12px 30px rgba(44, 96, 137, 0.2);
 }
 
 .small-chart {
@@ -147,7 +153,7 @@ h3 {
 
 .small-chart:hover {
   transform: scale(1.02);
-  box-shadow: 0 12px 30px rgba(138, 43, 226, 0.25);
+  box-shadow: 0 12px 30px rgba(44, 96, 137, 0.2).
 }
 
 .recharts-default-legend {
@@ -171,7 +177,7 @@ h3 {
 }
 .active-tab {
   font-weight: bold;
-  border-bottom: 2px solid #8a2be2;
+  border-bottom: 2px solid #2c6089;
 }
 
 .chart-header {
@@ -192,12 +198,12 @@ h3 {
   padding: 6px 12px;
   font-weight: bold;
   cursor: pointer;
-  color: #8a2be2;
+  color: #2c6089;
   border-bottom: 2px solid transparent;
 }
 
 .time-tabs-inline button.active-tab {
-  border-bottom: 2px solid #8a2be2;
+  border-bottom: 2px solid #2c6089;
 }
 
 /*EMPTY STATE*/
@@ -211,7 +217,7 @@ h3 {
 /*TOP PRODUCTS*/
 
 .top-products-container {
-  border: 1px solid #beacd6;
+  border: 1px solid #eef1f5;
   border-radius: 5px;
   padding: 10px;
 }
@@ -219,7 +225,7 @@ h3 {
 /*CATEGORIES*/
 
 .categories-container {
-  border: 1px solid #beacd6;
+  border: 1px solid #eef1f5;
   border-radius: 5px;
   padding: 20px;
   display: flex;
@@ -232,7 +238,7 @@ h3 {
 /*SALES*/
 
 .sales-container {
-  border: 1px solid #beacd6;
+  border: 1px solid #eef1f5;
   border-radius: 5px;
   padding: 10px;
 }
@@ -241,7 +247,7 @@ h3 {
   background: rgba(255, 255, 255, 0.7);
   border-radius: 16px;
   padding: 1rem;
-  box-shadow: 0 6px 20px rgba(190, 172, 214, 0.2);
+  box-shadow: 0 6px 20px rgba(44, 96, 137, 0.2);
   backdrop-filter: blur(8px);
   overflow: visible;
   width: 100%;
@@ -274,7 +280,7 @@ h3 {
 }
 
 .chart-container:hover {
-  box-shadow: 0 10px 25px rgba(138, 43, 226, 0.2);
+  box-shadow: 0 10px 25px rgba(44, 96, 137, 0.2);
   transform: translateY(-4px);
 }
 

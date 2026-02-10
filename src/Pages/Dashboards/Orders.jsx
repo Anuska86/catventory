@@ -47,7 +47,7 @@ const Orders = () => {
   const quarterLabels = ["Jan–Mar", "Apr–Jun", "Jul–Sep", "Oct–Dec"];
   const currentQuarterLabel = quarterLabels[currentQuarter];
 
-  const COLORS = ["#8A2BE2", "#DDA0DD", "#FF69B4", "#F5F5F5"];
+  const COLORS = ["#2c6089", "#4b86b4", "#84b7dd", "#adcbee"];
 
   useEffect(() => {
     const fetchData = async () => {
@@ -339,10 +339,10 @@ const Orders = () => {
                       x2="0"
                       y2="1"
                     >
-                      <stop offset="0%" stopColor="#8A2BE2" stopOpacity={0.8} />
+                      <stop offset="0%" stopColor="#2c6089" stopOpacity={0.8} />
                       <stop
                         offset="100%"
-                        stopColor="#DDA0DD"
+                        stopColor="#84b7dd"
                         stopOpacity={0.6}
                       />
                     </linearGradient>
@@ -427,8 +427,8 @@ const Orders = () => {
               <AreaChart data={monthlySalesData}>
                 <defs>
                   <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#8A2BE2" stopOpacity={0.4} />
-                    <stop offset="100%" stopColor="#DDA0DD" stopOpacity={0.1} />
+                    <stop offset="0%" stopColor="#2c6089" stopOpacity={0.4} />
+                    <stop offset="100%" stopColor="#84b7dd" stopOpacity={0.1} />
                   </linearGradient>
                 </defs>
                 <XAxis dataKey="month" />
@@ -441,10 +441,10 @@ const Orders = () => {
                 <Area
                   type="monotone"
                   dataKey="sales"
-                  stroke="#8A2BE2"
+                  stroke="#2c6089"
                   fill="url(#areaGradient)"
                   strokeWidth={3}
-                  dot={{ r: 4 }}
+                  dot={{ r: 4, fill: "#2c6089" }}
                   activeDot={{ r: 6 }}
                 />
               </AreaChart>

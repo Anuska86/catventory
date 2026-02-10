@@ -34,15 +34,17 @@
   padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
   width: 100%;
   box-sizing: border-box;
 }
 
 .login-form-container input[type="email"]:focus,
 .login-form-container input[type="password"]:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  border-color: #2c6089;
+  box-shadow: 0 0 0 3px rgba(44, 96, 137, 0.2);
   outline: none;
 }
 
@@ -96,7 +98,9 @@ form textarea {
   color: white;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
   box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
 }
 
@@ -112,19 +116,20 @@ form textarea {
 }
 
 .login-form-container button[type="submit"] {
-  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+  background: linear-gradient(135deg, #2c6089 0%, #84b7dd 100%);
   color: white;
   font-weight: 600;
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  transition: transform 0.2s ease, filter 0.3s ease; 
+  box-shadow: 0 4px 12px rgba(44, 96, 137, 0.3);
 }
 
 .login-form-container button[type="submit"]:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+  transform: translateY(-1px);
+  filter: brightness(1.1);
 }
 
 /* Fade-in animation */
