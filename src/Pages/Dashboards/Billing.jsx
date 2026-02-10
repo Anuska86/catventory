@@ -295,7 +295,7 @@ const Billing = () => {
                     marginRight: "1rem",
                     marginTop: "0.5rem",
                     fontSize: "0.9rem",
-                    color: "#83588a",
+                    color: "#2c6089",
                   }}
                 >
                   <span

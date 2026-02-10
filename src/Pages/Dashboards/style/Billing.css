@@ -38,7 +38,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  color: #83588a;
+  color: #2c6089;
   font-size: 1.2rem;
 }
 
@@ -98,7 +98,7 @@ h3 {
 
 /*FINANCIAL STATUS*/
 .financial-status-container {
-  border: 1px solid #beacd6;
+  border: 1px solid #2c6089;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -107,7 +107,7 @@ h3 {
 }
 
 .financial-status-container h3 {
-  color: #83588a;
+  color: #2c6089;
 }
 
 /* SHIPPING STATUS*/
@@ -122,7 +122,7 @@ h3 {
 }
 
 .shipping-status-container h3 {
-  color: #83588a;
+  color: #2c6089;
 }
 
 .financial-status-container:hover,
@@ -143,7 +143,7 @@ h3 {
 }
 
 .invoice-trend-container h3 {
-  color: #83588a;
+  color: #2c6089;
 }
 
 /*EMPTY STATE*/
@@ -151,7 +151,7 @@ h3 {
 .empty-state {
   text-align: center;
   padding: 2rem;
-  color: #83588a;
+  color: #2c6089;
   font-style: italic;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 12px;
@@ -195,7 +195,7 @@ h3 {
 }
 
 .billing-chart-container h3 {
-  color: #83588a;
+  color: #2c6089;
 }
 
 .bar-chart .recharts-bar-rectangle {
@@ -234,7 +234,7 @@ h3 {
   margin-top: 0.5rem;
   text-align: center;
   font-size: 0.95rem;
-  color: #83588a;
+  color: #2c6089;
 }
 
 .product-color-legend {
